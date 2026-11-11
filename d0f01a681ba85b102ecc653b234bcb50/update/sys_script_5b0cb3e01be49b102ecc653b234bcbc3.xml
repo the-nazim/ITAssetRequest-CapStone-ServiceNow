@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2307388_it_ass_0_asset_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Record Creation in cmdb_model table</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	
+	var consumableChoice = current.getDisplayValue('consumables');
+    if (!consumableChoice) return;
+
+    // 1. Find the hardware asset linked to the CI (Created in Rule 2)
+    var hardwareSysId = '';
+    var hwGr = new GlideRecord('alm_hardware');
+    hwGr.addQuery('ci', current.getValue('asset'));
+    hwGr.query();
+    if (hwGr.next()) {
+        hardwareSysId = hwGr.getUniqueValue();
+    }
+    
+    // Cannot link consumable if parent hardware wasn't found
+    if (hardwareSysId == '') return; 
+
+    // 2. Get the Sys ID for the "Consumable" Model Category
+    var modelCategorySysId = '';
+    var grCategory = new GlideRecord('cmdb_model_category');
+    if (grCategory.get('name', 'Consumable')) {
+        modelCategorySysId = grCategory.getUniqueValue();
+    }
+
+    // 3. Create or find the cmdb_model
+    var consumableModelSysId = '';
+    var grModel = new GlideRecord('cmdb_model');
+    
+    grModel.addQuery('name', consumableChoice);
+    grModel.addQuery('manufacturer', current.company);
+    grModel.query();
+    
+    if (grModel.next()) {
+        consumableModelSysId = grModel.getUniqueValue();
+    } else {
+        grModel.initialize();
+        grModel.setValue('name', consumableChoice);
+        grModel.setValue('manufacturer', current.company);
+        grModel.setValue('cmdb_model_category', modelCategorySysId); 
+        consumableModelSysId = grModel.insert();
+    }
+
+    // 4. Create the alm_consumable record
+    if (consumableModelSysId != '') {
+        var grConsumable = new GlideRecord('alm_consumable');
+        grConsumable.initialize();
+        grConsumable.setValue('model_category', modelCategorySysId);
+        grConsumable.setValue('model', consumableModelSysId);
+        grConsumable.setValue('assigned_to', current.getValue('requestor'));
+        grConsumable.setValue('location', current.requestor.location);
+        grConsumable.setValue('parent', hardwareSysId); // Link to alm_hardware
+        
+        grConsumable.setValue('state', '10'); 
+        grConsumable.setValue('quantity', '1');
+        
+        grConsumable.insert();
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 13:52:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5b0cb3e01be49b102ecc653b234bcbc3</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Record Creation in cmdb_model table</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name>sys_script_5b0cb3e01be49b102ecc653b234bcbc3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 14:55:14</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=5b0cb3e01be49b102ecc653b234bcbc3"/>
+</record_update>
