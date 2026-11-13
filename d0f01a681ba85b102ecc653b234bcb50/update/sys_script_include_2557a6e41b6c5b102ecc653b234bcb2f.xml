@@ -201,7 +201,7 @@ AssetManagementUtils.prototype = Object.extendsObject(global.AbstractAjaxProcess
 		if(almHrw.next()){
 			gs.info("AfterBR[Debug][Dispatch Condition] <1.1> Found Alm Hardware Record " + almHrw.getDisplayValue());
 			hrdwareID = almHrw.getUniqueValue();
-			almHrw.setValue('install_status', 9);
+			almHrw.setValue('install_status', 9); //9 = In Transit
 			almHrw.update();
 			gs.info("AfterBR[Debug][Dispatch Condition] <1.1> Alm Hardware Status updated to : " + almHrw.install_status);
 		}
@@ -211,7 +211,7 @@ AssetManagementUtils.prototype = Object.extendsObject(global.AbstractAjaxProcess
 			almConsm.query();
 			if(almConsm.next()){
 				gs.info("AfterBR[Debug][Dispatch Condition] <2.1> Found Alm Consumable Record " + almConsm.getDisplayValue());
-				almConsm.setValue('install_status', 9);
+				almConsm.setValue('install_status', 9); //9 = In Transit
 				almConsm.update();
 				gs.info("AfterBR[Debug][Dispatch Condition] <2.1> Alm Consumable Status updated to : " + almConsm.install_status);
 			}
@@ -257,13 +257,13 @@ AssetManagementUtils.prototype = Object.extendsObject(global.AbstractAjaxProcess
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-11-11 07:24:01</sys_created_on>
         <sys_id>2557a6e41b6c5b102ecc653b234bcb2f</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>AssetManagementUtils</sys_name>
         <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
         <sys_update_name>sys_script_include_2557a6e41b6c5b102ecc653b234bcb2f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-13 05:54:09</sys_updated_on>
+        <sys_updated_on>2026-11-13 07:06:26</sys_updated_on>
     </sys_script_include>
 </record_update>
