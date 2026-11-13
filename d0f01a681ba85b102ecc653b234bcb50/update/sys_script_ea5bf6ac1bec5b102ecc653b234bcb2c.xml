@@ -36,31 +36,14 @@
 	var assetDepartment = current.requestor.department;
 	
 	// gs.info(assetManufacturer);
-	var tablePrefix = 'cmdb_ci_';
 
-	var targetTable = tablePrefix+assetType;
+	var utils = new AssetManagementUtils();
 
-	var grComp = new GlideRecord(targetTable);
-	grComp.initialize();
-	grComp.setValue('manufacturer', assetManufacturer);
-	grComp.setValue('assigned_to', assetAssignTo);
-	grComp.setValue('department', assetDepartment);
-		
-    var requestorFirstName = current.requestor.first_name.toString();
-    var companyFullName = current.company.name.toString();
+	var isCreated = utils.cmdbRecordCreation(assetType, assetManufacturer, assetAssignTo, assetDepartment);
 
-        
-    var temp = companyFullName.split(' ');
-    var companyFirstName = temp[0];
-    
-    var finalStr = '*' + requestorFirstName.toUpperCase() + '-' + companyFirstName.toUpperCase();    
-    gs.info('Final str: ' + finalStr);    
-    grComp.setValue('name', finalStr);
-        
-    var grResult = grComp.insert();
-
-	current.setValue('asset', grResult);
-
+	if(isCreated != ''){
+		current.setValue('asset', isCreated);
+	}
 	
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -69,7 +52,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ea5bf6ac1bec5b102ecc653b234bcb2c</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Fetching Asset Details from CMDB_CI_</sys_name>
         <sys_overrides/>
         <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
@@ -77,7 +60,7 @@
         <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
         <sys_update_name>sys_script_ea5bf6ac1bec5b102ecc653b234bcb2c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-11 12:40:18</sys_updated_on>
+        <sys_updated_on>2026-11-12 09:36:11</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

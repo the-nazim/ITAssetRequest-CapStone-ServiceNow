@@ -32,20 +32,18 @@
 	// Add your code here
 	var company = current.company;
 	var requestorDepartment = current.requestor.department;
-	var assignedUser = current.requestor;
+	// var assignedUser = current.requestor;
 	var configedItem = current.asset;
+	var reqNumber = current.number;
 	
 	gs.info('Config Asset Item: '+ configedItem);
 
-	var almHardware = new GlideRecord('alm_hardware');
-	almHardware.initialize();
-	
-	almHardware.setValue('company', company);
-	almHardware.setValue('department', requestorDepartment);
-	almHardware.setValue('assigned_to', assignedUser);
-	almHardware.setValue('ci', configedItem);
 
-	almHardware.insert();
+	var utils = new AssetManagementUtils();
+
+	utils.hardwareRecordCreation(company, requestorDepartment, configedItem, reqNumber);
+
+
 	// if(isInserted)
 		// gs.info("ALM Hardware: "+isInserted);
 
@@ -56,7 +54,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c5e3bb241ba49b102ecc653b234bcb3b</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Record Creating in Alm_Hardware</sys_name>
         <sys_overrides/>
         <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
@@ -64,7 +62,7 @@
         <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
         <sys_update_name>sys_script_c5e3bb241ba49b102ecc653b234bcb3b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-11 13:29:46</sys_updated_on>
+        <sys_updated_on>2026-11-12 14:54:43</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
