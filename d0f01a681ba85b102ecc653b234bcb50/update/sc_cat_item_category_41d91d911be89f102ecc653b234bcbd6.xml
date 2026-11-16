@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Asset Request Record">e1181ddd1ba89f102ecc653b234bcb1d</sc_cat_item>
+        <sc_category display_value="Hardware Asset">651395bc53231300e321ddeeff7b1221</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 09:39:43</sys_created_on>
+        <sys_id>41d91d911be89f102ecc653b234bcbd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hardware Asset.Asset Request Record</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name>sc_cat_item_category_41d91d911be89f102ecc653b234bcbd6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 09:39:43</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

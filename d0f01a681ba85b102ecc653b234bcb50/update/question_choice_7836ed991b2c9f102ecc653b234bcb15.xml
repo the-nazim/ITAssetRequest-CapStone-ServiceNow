@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>500</order>
+        <published_ref/>
+        <question display_value="Status">abb5a5191b2c9f102ecc653b234bcb3b</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 10:33:50</sys_created_on>
+        <sys_id>7836ed991b2c9f102ecc653b234bcb15</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Closed</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name>question_choice_7836ed991b2c9f102ecc653b234bcb15</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 10:34:20</sys_updated_on>
+        <text>Closed</text>
+        <value>closed</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=7836ed991b2c9f102ecc653b234bcb15"/>
+</record_update>

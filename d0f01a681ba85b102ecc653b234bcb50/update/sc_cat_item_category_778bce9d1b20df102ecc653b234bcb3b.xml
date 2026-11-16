@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Asset Recquest Catalog">57fa8e5d1b20df102ecc653b234bcbcd</sc_cat_item>
+        <sc_category display_value="Hardware Asset">651395bc53231300e321ddeeff7b1221</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 13:16:59</sys_created_on>
+        <sys_id>778bce9d1b20df102ecc653b234bcb3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hardware Asset.Asset Recquest Catalog</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name>sc_cat_item_category_778bce9d1b20df102ecc653b234bcb3b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 13:16:59</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>
