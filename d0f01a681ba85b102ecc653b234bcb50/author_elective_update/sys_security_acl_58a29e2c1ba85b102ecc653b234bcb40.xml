@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>false</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow create for records in x_2307388_it_ass_0_asset_request, for users with role x_2307388_it_ass_0.asset_request_user.</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_2307388_it_ass_0_asset_request</name>
+        <operation display_value="create">create</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 05:52:26</sys_created_on>
+        <sys_id>58a29e2c1ba85b102ecc653b234bcb40</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_2307388_it_ass_0_asset_request</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name>sys_security_acl_58a29e2c1ba85b102ecc653b234bcb40</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 06:50:19</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</application>
+        <file_path/>
+        <instance_id>97404d5393945b90d9f6ddd548373c82</instance_id>
+        <instance_name>dev475083</instance_name>
+        <merge_base/>
+        <name>sys_security_acl_58a29e2c1ba85b102ecc653b234bcb40</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>false</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><controlled_by_refs/><decision_type>allow</decision_type><description>Allow create for records in x_2307388_it_ass_0_asset_request, for users with role x_2307388_it_ass_0.asset_request_user.</description><local_or_existing>Existing</local_or_existing><name>x_2307388_it_ass_0_asset_request</name><operation display_value="create">create</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-11-11 05:52:26</sys_created_on><sys_id>58a29e2c1ba85b102ecc653b234bcb40</sys_id><sys_mod_count>2</sys_mod_count><sys_name>x_2307388_it_ass_0_asset_request</sys_name><sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package><sys_policy/><sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope><sys_update_name>sys_security_acl_58a29e2c1ba85b102ecc653b234bcb40</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-11-11 06:50:19</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-1803883490</payload_hash>
+        <record_name>x_2307388_it_ass_0_asset_request</record_name>
+        <reverted_from/>
+        <source>90f01a681ba85b102ecc653b234bcb7f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 06:50:19</sys_created_on>
+        <sys_id>d0ef1ee41b2c5b102ecc653b234bcb32</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1c95f2a040000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 06:50:19</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>d0ef1ee4802c5b10f22696f9a0f85231</update_guid>
+        <update_guid_history>d0ef1ee4802c5b10f22696f9a0f85231:-1803883490,10a29e2cc2a85b10d4c46ad443c2588a:1881617937</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 06:58:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>89d0e75cf50444bd983970261bf04549</sys_id>
+        <sys_metadata>58a29e2c1ba85b102ecc653b234bcb40</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2307388_it_ass_0_asset_request</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_parent display_value="x_2307388_it_ass_0_asset_request">64a29e2c1ba85b102ecc653b234bcbf3</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_scope_delete display_value="">038b3e0039e846188026753ca8ef6240</sys_scope_delete>
+        <sys_update_name>sys_security_acl_58a29e2c1ba85b102ecc653b234bcb40</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_58a29e2c1ba85b102ecc653b234bcb40">d0ef1ee41b2c5b102ecc653b234bcb32</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 06:58:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

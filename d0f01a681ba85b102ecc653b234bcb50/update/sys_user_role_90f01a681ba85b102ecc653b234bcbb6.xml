@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Default admin role</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>bVaDCA3rjzwnlYtT/Ye4QdL8Lrb9J6nTk/kfq87K9Co=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_2307388_it_ass_0.admin</name>

@@ -9,7 +9,7 @@
         <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
         <sys_policy/>
         <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
-        <sys_security_acl display_value="">fc0edae01b2c5b102ecc653b234bcbdc</sys_security_acl>
+        <sys_security_acl display_value="x_2307388_it_ass_0_asset_request">fc0edae01b2c5b102ecc653b234bcbdc</sys_security_acl>
         <sys_update_name>sys_security_acl_role_c12edee01b2c5b102ecc653b234bcb5d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-11-11 06:42:56</sys_updated_on>

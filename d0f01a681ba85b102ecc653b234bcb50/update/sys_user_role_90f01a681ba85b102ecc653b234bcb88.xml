@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Manager role</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>cweRWPw3y/TZpx8nGTfopSLb6Qau1kMAJ1Dlk2yIWUQ=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_2307388_it_ass_0.it.asset.managers</name>

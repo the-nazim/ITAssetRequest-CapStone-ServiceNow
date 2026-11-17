@@ -6,7 +6,6 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2026-11-11 06:00:23</sys_created_on>
-            <sys_id>f0741a201be85b102ecc653b234bcba9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>type_of_asset</sys_name>
             <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
@@ -30,7 +29,6 @@
             <sys_created_on>2026-11-11 06:00:23</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>f8741a201be85b102ecc653b234bcba8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-11-11 06:00:23</sys_updated_on>
@@ -50,7 +48,6 @@
             <sys_created_on>2026-11-11 06:00:23</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>f8741a201be85b102ecc653b234bcbab</sys_id>
             <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-11-11 12:15:57</sys_updated_on>
@@ -70,7 +67,6 @@
             <sys_created_on>2026-11-11 06:00:23</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>70741a201be85b102ecc653b234bcbad</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-11-11 06:00:23</sys_updated_on>
@@ -90,7 +86,6 @@
             <sys_created_on>2026-11-11 06:00:23</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>f4741a201be85b102ecc653b234bcbae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-11-11 06:00:23</sys_updated_on>

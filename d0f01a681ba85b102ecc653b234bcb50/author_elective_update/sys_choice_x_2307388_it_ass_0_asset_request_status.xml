@@ -6,7 +6,6 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2026-11-11 06:00:26</sys_created_on>
-            <sys_id>61741a201be85b102ecc653b234bcbec</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>status</sys_name>
             <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
@@ -30,7 +29,6 @@
             <sys_created_on>2026-11-11 06:00:26</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>69741a201be85b102ecc653b234bcbeb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-11-11 06:00:26</sys_updated_on>
@@ -50,7 +48,6 @@
             <sys_created_on>2026-11-11 06:00:26</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>65741a201be85b102ecc653b234bcbee</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-11-11 06:00:26</sys_updated_on>
@@ -70,7 +67,6 @@
             <sys_created_on>2026-11-11 06:00:26</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>e9741a201be85b102ecc653b234bcbef</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-11-11 06:00:26</sys_updated_on>
@@ -90,7 +86,6 @@
             <sys_created_on>2026-11-11 06:00:26</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>29741a201be85b102ecc653b234bcbfd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-11-11 06:00:26</sys_updated_on>
@@ -110,7 +105,6 @@
             <sys_created_on>2026-11-11 06:00:26</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>ad741a201be85b102ecc653b234bcbfe</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-11-11 06:00:26</sys_updated_on>
