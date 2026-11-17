@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2307388_it_ass_0.AssetManagementUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>AssetManagementUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AssetManagementUtils = Class.create();
+AssetManagementUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	vipChecker: function(){
+		var requestor = this.getParameter('sysparm_requestor');
+		var ga = new GlideRecord('sys_user');
+		if(ga.get(requestor)){
+			var isVip = ga.getValue('vip');
+			// gs.info("VIP checker: "+ isVip);
+			return isVip;
+		}
+	},
+
+	assigningGroup: function(brAssetType){  //Assigning Group Based on Asset Type
+
+		var assetTypeForm = brAssetType;
+
+		var assetType = '';
+		if (assetTypeForm == 'netgear') {
+			assetType = 'Network Gear';
+		}
+		else {
+			assetType = assetTypeForm;
+		}
+
+		gs.info("BR1\n Asset Type: " + assetType);
+
+		var grGroup = new GlideRecord('sys_user_group');
+		grGroup.addQuery('name', assetType);
+		grGroup.setLimit(1);
+		grGroup.query();
+		if(grGroup.next()) {
+			
+			var groupID = grGroup.sys_id;
+			gs.info("BR1\nGroup sys_id:"+groupID+"\nGroup type: "+JSON.stringify(groupID));
+	
+			return groupID;
+		}
+	},
+
+
+	//cmdb_ci_<Asset Type> Record creation
+	cmdbRecordCreation: function(assetType, assetManufacturer, assetAssignTo, assetDepartment){
+		var tablePrefix = 'cmdb_ci_';
+
+		var targetTable = tablePrefix+assetType;
+
+		var grComp = new GlideRecord(targetTable);
+		grComp.initialize();
+		grComp.setValue('manufacturer', assetManufacturer);
+		grComp.setValue('assigned_to', assetAssignTo);
+		grComp.setValue('department', assetDepartment);
+			
+		var requestorFirstName = current.requestor.first_name.toString();
+		var companyFullName = current.company.name.toString();
+
+			
+		var temp = companyFullName.split(' ');
+		var companyFirstName = temp[0];
+		
+		var finalStr = '*' + requestorFirstName.toUpperCase() + '-' + companyFirstName.toUpperCase();    
+		gs.info('Final str: ' + finalStr);    
+		grComp.setValue('name', finalStr);
+			
+		var grResult = grComp.insert();
+		
+		return grResult;
+	},	
+
+	//Alm Hardware Record Creation After BR status is submitted in record
+	//In alm_hardware the status is 2 = On Order
+	hardwareRecordCreation: function(company, requestorDepartment, configedItem, reqNumber) {
+		var almHardware = new GlideRecord('alm_hardware');
+		
+		almHardware.addQuery('asset_tag', reqNumber);
+		almHardware.setLimit(1);
+		almHardware.query();
+		if(almHardware.next()){
+			return;
+		}
+		
+		else {
+			almHardware.initialize();
+			
+			almHardware.setValue('company', company);
+			almHardware.setValue('department', requestorDepartment);
+			// almHardware.setValue('assigned_to', assignedUser); 
+			almHardware.setValue('ci', configedItem);
+			almHardware.setValue('install_status', 2);
+			almHardware.setValue('asset_tag', reqNumber);
+
+			almHardware.insert();
+		}
+		gs.info("BR3\nAlm Hardware Record Created");
+	},
+
+	//Submitted the record where ststus is submitted
+	//Created a record in alm_consumable with status 2 = On Order
+	//Also created record table in cmdb_model
+	//fetched the ci=>Configuration Item from alm_hardware 
+	consumableassetHandler: function(requestUser, userLocation, assetManufacturer, consumableChoice, userAsset){
+		// 1. Find the hardware asset linked to the CI (Created in Rule 2)
+		var hardwareSysId = '';
+		var hwGr = new GlideRecord('alm_hardware');
+		hwGr.addQuery('ci', userAsset);
+		hwGr.query();
+		if (hwGr.next()) {
+			hardwareSysId = hwGr.getUniqueValue();
+		}
+		
+		// Cannot link consumable if parent hardware wasn't found
+		if (hardwareSysId == '') 
+			return; 
+
+		// 2. Get the Sys ID for the "Consumable" Model Category
+		var modelCategorySysId = '';
+		var grCategory = new GlideRecord('cmdb_model_category');
+		if (grCategory.get('name', 'Consumable')) {
+			modelCategorySysId = grCategory.getUniqueValue();
+		}
+
+		// 3. Create or find the cmdb_model
+		var consumableModelSysId = '';
+		var grModel = new GlideRecord('cmdb_model');
+		
+		grModel.addQuery('name', consumableChoice);
+		grModel.addQuery('manufacturer', assetManufacturer);
+		grModel.query();
+		
+		if (grModel.next()) {
+			consumableModelSysId = grModel.getUniqueValue();
+		} 
+		else {
+			grModel.initialize();
+			grModel.setValue('name', consumableChoice);
+			grModel.setValue('manufacturer', assetManufacturer);
+			grModel.setValue('cmdb_model_category', modelCategorySysId); 
+			consumableModelSysId = grModel.insert();
+		}
+
+        // 4. Create the alm_consumable record
+        if (consumableModelSysId != '') {
+			var grConsumable = new GlideRecord('alm_consumable');
+			
+			// Search to see if OOB rules already created a consumable for this model
+			grConsumable.addQuery('model', consumableModelSysId);
+			// grConsumable.addNullQuery('assigned_to');  // Look for an unassigned one
+			// grConsumable.orderByDesc('sys_created_on');
+			
+			grConsumable.query();
+			
+			if (grConsumable.next()) {
+				// Update OOB auto-generated record
+				grConsumable.setValue('install_status', 2); // 10 = Consumed &  2 = On Order
+				grConsumable.setValue('quantity', '1');
+				// grConsumable.setValue('assigned_to', requestUser); This is not required for status is 2
+				grConsumable.setValue('location', userLocation);
+				grConsumable.setValue('parent', hardwareSysId);
+				grConsumable.update();
+				gs.info('\n2. Updated auto-created Consumable [alm_consumable]. Sys ID: ' + grConsumable.getUniqueValue());
+			} 
+			
+			else {
+				// Insert brand new record
+				grConsumable.initialize();
+				grConsumable.setValue('model_category', modelCategorySysId);
+				grConsumable.setValue('model', consumableModelSysId);
+				grConsumable.setValue('install_status', 2); // 10 = Consumed &  2 = On Order
+				grConsumable.setValue('quantity', '1');
+				// grConsumable.setValue('assigned_to', requestUser); This is not required for status is 2
+				grConsumable.setValue('location', userLocation);
+				grConsumable.setValue('parent', hardwareSysId);
+				var newConsumableSysId = grConsumable.insert();
+				gs.info('\n2. Created NEW Consumable [alm_consumable]. Sys ID: ' + newConsumableSysId);
+			}
+			gs.info("BR4\nConsumable Record");
+		}
+	},
+
+	//After BR
+	//When status is Dispatched
+	almDispatched: function(assetTag) {
+		gs.info("AfterBR[Debug] Inside Dispatch Function" + "\nRequest Number: " + assetTag);
+		var hrdwareID = '';
+
+		var almHrw = new GlideRecord('alm_hardware');
+		almHrw.addQuery('asset_tag', assetTag);
+		almHrw.setLimit(1);
+		almHrw.query();
+		if(almHrw.next()){
+			gs.info("AfterBR[Debug][Dispatch Condition] <1.1> Found Alm Hardware Record " + almHrw.getDisplayValue());
+			hrdwareID = almHrw.getUniqueValue();
+			almHrw.setValue('install_status', 9); //9 = In Transit
+			almHrw.update();
+			gs.info("AfterBR[Debug][Dispatch Condition] <1.1> Alm Hardware Status updated to : " + almHrw.install_status);
+		}
+		if(hrdwareID!=''){
+			var almConsm = new GlideRecord('alm_consumable');
+			almConsm.addQuery('parent', hrdwareID);
+			almConsm.query();
+			if(almConsm.next()){
+				gs.info("AfterBR[Debug][Dispatch Condition] <2.1> Found Alm Consumable Record " + almConsm.getDisplayValue());
+				almConsm.setValue('install_status', 9); //9 = In Transit
+				almConsm.update();
+				gs.info("AfterBR[Debug][Dispatch Condition] <2.1> Alm Consumable Status updated to : " + almConsm.install_status);
+			}
+		}
+	},
+
+	//When status is Delivered
+	almDelivered: function(requestUser, reqNumber){
+		gs.info("AfterBR[Debug][Dispatch Condition] Inside Delivery Function " + "User: " + requestUser + " Number: " + reqNumber);
+		var hardWareID = '';
+		
+		var almHrd = new GlideRecord('alm_hardware');
+		almHrd.addQuery('asset_tag', reqNumber);
+		almHrd.setLimit(1);
+		almHrd.query();
+		if(almHrd.next()){
+			gs.info("AfterBR[Debug][Delivery Condition] <1.2> Found Alm Hardware Record " + almHrd.getDisplayValue());
+			hardWareID = almHrd.getUniqueValue();
+			almHrd.setValue('install_status', 1); //1 = In Use
+			almHrd.assigned_to = requestUser;
+			almHrd.update();
+			gs.info("AfterBR[Debug][Delivery Condition] <1.2> Alm Hardware Status updated to : " + almHrd.install_status+
+					"\nFor Assigned User: " + almHrd.assigned_to);
+		}
+		if(hardWareID!=''){
+			var almCon = new GlideRecord('alm_consumable');
+			almCon.addQuery('parent', hardWareID);
+			almCon.query();
+			if(almCon.next()){
+				gs.info("AfterBR[Debug][Dispatch Condition] <2.2> Found Alm Consumable Record " + almCon.getDisplayValue());
+				almCon.setValue('install_status', 10); //10 = Consumed
+				almCon.assigned_to = requestUser;
+				almCon.update();
+				gs.info("AfterBR[Debug][Delivery Condition] <2.2> Alm Consumable Status updated to : " + almCon.install_status+
+					"\nFor Assigned User: " + almCon.assigned_to);
+			}
+		}
+	},
+
+    type: 'AssetManagementUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 07:24:01</sys_created_on>
+        <sys_id>2557a6e41b6c5b102ecc653b234bcb2f</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>AssetManagementUtils</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name>sys_script_include_2557a6e41b6c5b102ecc653b234bcb2f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 07:06:26</sys_updated_on>
+    </sys_script_include>
+</record_update>

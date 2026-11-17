@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>200</order>
+        <published_ref/>
+        <question display_value="Type of Asset">9be071191b6c9f102ecc653b234bcb17</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 11:22:38</sys_created_on>
+        <sys_id>385179dd1b6c9f102ecc653b234bcbf2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Network Gear</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name>question_choice_385179dd1b6c9f102ecc653b234bcbf2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 11:23:19</sys_updated_on>
+        <text>Network Gear</text>
+        <value>netgear</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=385179dd1b6c9f102ecc653b234bcbf2"/>
+</record_update>

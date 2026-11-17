@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_in_email_action">
+    <sysevent_in_email_action action="INSERT_OR_UPDATE">
+        <action>record_action</action>
+        <active>true</active>
+        <assignment_operator/>
+        <condition_script/>
+        <description/>
+        <event_name>email.read</event_name>
+        <filter_condition table="sys_email">subjectSTARTSWITHRequest Asset^EQ<item endquery="false" field="subject" goto="false" newquery="false" operator="STARTSWITH" or="false" value="Request Asset"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <from/>
+        <name>Asset Request Inbound Action</name>
+        <order>50</order>
+        <reply_email/>
+        <required_roles/>
+        <script><![CDATA[(function runAction(/*GlideRecord*/ current, /*GlideRecord*/ event, /*EmailWrapper*/ email, /*ScopedEmailLogger*/ logger, /*EmailClassifier*/ classifier) {
+
+	current.initialize();
+
+	current.requestor = gs.getUserID();
+
+	current.short_description = email.subject;
+	// current.description = email.body_text;
+
+	var rawBody = email.body_text + ''; 
+
+	var noGreeting = rawBody.replace(/^(hi|hello|hey|dear|greetings)[^\r\n]*\r?\n\s*/i, '');
+
+	var cleanBody = noGreeting.replace(/(^|\n)(thanks|thank you|regards|best regards|kind regards|best|sincerely|cheers)[^\r\n]*\r?\n[\s\S]*$/i, '');
+
+	current.description = cleanBody.trim();
+
+	// 2. Set the default status
+	if (email.body.asset_type != undefined) {
+		var assetType = email.body.asset_type.toLowerCase();
+		if(assetType == 'network gear'){
+			current.type_of_asset = 'netgear';
+		}
+		else {
+			current.type_of_asset = assetType;
+		}
+
+	}
+
+	// Safely check and assign the consumable value
+	if (email.body.consumables != undefined) {
+		current.consumables = email.body.consumables.toLowerCase();
+	} else if (email.body.consumable != undefined) {
+		current.consumables = email.body.consumable.toLowerCase();
+	}
+
+	if (email.body.priority != undefined) {
+		current.priority = email.body.priority;
+	}
+	else {
+		current.priority = 3;
+	}
+	
+	if(email.body.company != undefined) {
+		current.company.setDisplayValue(email.body.company);
+	}
+
+	current.status.setDisplayValue('submitted');
+
+	current.insert();
+
+// Log the creation for debugging
+gs.info("Inbound Action [Asset Request] created record: " + current.number + " from email: " + email.origemail + "Sender user: " + current.requestor + "\nAsset Type: " + current.type_of_asset + "\nConsumable: " + current.consumables+ "\nCompany: " + current.company);
+
+})(current, event, email, logger, classifier);]]></script>
+        <stop_processing>true</stop_processing>
+        <sys_class_name>sysevent_in_email_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-16 06:41:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>98cb8c161b6457502ecc653b234bcbab</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Asset Request Inbound Action</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name>sysevent_in_email_action_98cb8c161b6457502ecc653b234bcbab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 09:29:01</sys_updated_on>
+        <table>x_2307388_it_ass_0_asset_request</table>
+        <template/>
+        <type>new</type>
+    </sysevent_in_email_action>
+</record_update>
