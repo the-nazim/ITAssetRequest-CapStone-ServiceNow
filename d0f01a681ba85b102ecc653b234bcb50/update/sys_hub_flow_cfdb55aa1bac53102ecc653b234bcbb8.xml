@@ -1,0 +1,3149 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=22953000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>30000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>catalog_inbound_flow_asset_request</internal_name>
+        <label_cache>[{"name":"flow_variable.asset_type","label":"Flow Variables➛Asset Type","reference":"","reference_display":"","type":"string","base_type":"string","parent_table_name":null,"column_name":"","choices":null,"usedInstances":{"73b7256c-e53a-4661-917e-1bfd2d00edec":["type_of_asset"],"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["type_of_asset"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"e765044e-aa88-4aa7-8247-0e2af00c2ca6","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"trigger.inbound_email.user_id","label":"Trigger - Inbound Email➛Email Record➛User ID","reference":"sys_user","reference_display":"User ID","type":"reference","base_type":"reference","parent_table_name":"sys_email","column_name":"user_id","choices":[{"order":0.0}],"usedInstances":{"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["requestor"],"aba6bd08-1a45-4ce3-a7f9-48b794f617d2":["sysparm_requested_for"]},"attributes":null},{"name":"flow_variable.company","label":"Flow Variables➛Company","reference":"","reference_display":"","type":"string","base_type":"string","parent_table_name":null,"column_name":"","choices":null,"usedInstances":{"73b7256c-e53a-4661-917e-1bfd2d00edec":["company"],"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["company"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"098b5865-b64d-49eb-9083-e0f646b0e272","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.priority","label":"Flow Variables➛Priority","reference":"","reference_display":"","type":"string","base_type":"string","parent_table_name":null,"column_name":"","choices":null,"usedInstances":{"73b7256c-e53a-4661-917e-1bfd2d00edec":["priority"],"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["priority"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"44b14904-562e-419f-841c-f855b946db53","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"trigger.inbound_email.sys_id","label":"Trigger - Inbound Email➛Email Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_email","column_name":"sys_id","choices":null,"usedInstances":{"aba6bd08-1a45-4ce3-a7f9-48b794f617d2":["sysparm_requested_for"],"73b7256c-e53a-4661-917e-1bfd2d00edec":["requestor"],"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["requestor"]},"attributes":null},{"name":"trigger.inbound_email","label":"Trigger - Inbound Email➛Email Record","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":[{"order":0.0}],"usedInstances":{"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["requestor"],"aba6bd08-1a45-4ce3-a7f9-48b794f617d2":["sysparm_requested_for"]},"attributes":{"":""}},{"name":"trigger.subject","label":"Trigger - Inbound Email➛Subject","reference":null,"reference_display":null,"type":"string_full_utf8","base_type":"string_full_utf8","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["short_description"]},"attributes":{"test_input_hidden":"true"}},{"name":"flow_variable.consumable","label":"Flow Variables➛consumable","reference":"","reference_display":"","type":"string","base_type":"string","parent_table_name":null,"column_name":"","choices":null,"usedInstances":{"15f87092-f0b7-4980-b4df-b5a35a3b5197":[null],"df2b0a7a-fa44-46fa-855a-463f9e61804d":[null],"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["consumables"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"217342a4-44b9-4cde-8a8d-b8d5a2979fb1","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"trigger.body_text","label":"Trigger - Inbound Email➛Body Text","reference":null,"reference_display":null,"type":"string_full_utf8","base_type":"string_full_utf8","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"dbdcce06-1630-405d-9699-2168a9b59a01":["description-5"],"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["description"]},"attributes":{"test_input_hidden":"true"}},{"name":"flow_variable.description","label":"Flow Variables➛Description","reference":null,"reference_display":null,"type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"73b7256c-e53a-4661-917e-1bfd2d00edec":["description"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"55022306-edcc-465f-88dd-2e9721d2fa78"}},{"name":"trigger.inbound_email.subject","label":"Trigger - Inbound Email➛Email Record➛Subject","reference":"","reference_display":"Subject","type":"string_full_utf8","base_type":"string_full_utf8","parent_table_name":"sys_email","column_name":"subject","choices":null,"usedInstances":{"dbdcce06-1630-405d-9699-2168a9b59a01":["short_description-4"]},"attributes":null},{"name":"flow_variable.short_description","label":"Flow Variables➛Short Description","reference":null,"reference_display":null,"type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"73b7256c-e53a-4661-917e-1bfd2d00edec":["short_description"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"32a2e4a5-baf5-4798-bc0c-5d1a20b05a61"}}]</label_cache>
+        <master_snapshot>5add4aa61ba493102ecc653b234bcb53</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Catalog Inbound Flow Asset Request</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>3add8aa61ba493102ecc653b234bcb18</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:00:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cfdb55aa1bac53102ecc653b234bcbb8</sys_id>
+        <sys_mod_count>88</sys_mod_count>
+        <sys_name>Catalog Inbound Flow Asset Request</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name>sys_hub_flow_cfdb55aa1bac53102ecc653b234bcbb8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 14:02:20</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>494cf2621b2c93102ecc653b234bcbb7</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=cfdb55aa1bac53102ecc653b234bcbb8"/>
+    <sys_variable_value action="delete_multiple" query="document_key=cfdb55aa1bac53102ecc653b234bcbb8"/>
+    <sys_flow_email_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <email_conditions table="sys_email">subjectSTARTSWITHCIF Request Asset<item endquery="false" field="subject" goto="false" newquery="false" operator="STARTSWITH" or="false" value="CIF Request Asset"/>
+        </email_conditions>
+        <event_name>email.read</event_name>
+        <name/>
+        <order/>
+        <published_version/>
+        <stop_condition_evaluation>true</stop_condition_evaluation>
+        <sys_class_name>sys_flow_email_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3add8aa61ba493102ecc653b234bcb18</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:36</sys_updated_on>
+        <target_table>x_2307388_it_ass_0_asset_request</target_table>
+        <trigger_definition display_value="Inbound Email">6f0180400b320300f4eb8bf637673ad4</trigger_definition>
+    </sys_flow_email_trigger>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=cfdb55aa1bac53102ecc653b234bcbb8"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=cfdb55aa1bac53102ecc653b234bcbb8"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=cfdb55aa1bac53102ecc653b234bcbb8^sys_idNOT IN07db55aa1bac53102ecc653b234bcbba"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>cfdb55aa1bac53102ecc653b234bcbb8</id>
+        <name>Catalog Inbound Flow Asset Request</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:00:59</sys_created_on>
+        <sys_id>07db55aa1bac53102ecc653b234bcbba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:00:59</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=07db55aa1bac53102ecc653b234bcbba"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=cfdb55aa1bac53102ecc653b234bcbb8^sys_idNOT IN1b4cd9a61b2093102ecc653b234bcbf2,1f4c1da61b2093102ecc653b234bcb66,274c1da61b2093102ecc653b234bcba3,634c1da61b2093102ecc653b234bcbe0,af4c1da61b2093102ecc653b234bcbeb,d34c1da61b2093102ecc653b234bcb8b,e74c1da61b2093102ecc653b234bcbbb"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inbound_email</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Inbound Email</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_email">sys_email</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ</reference_qual>
+        <reference_qual_condition table="sys_email">type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ<item display_value="received" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="received"/>
+            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:55</sys_created_on>
+        <sys_id>1b4cd9a61b2093102ecc653b234bcbf2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:29:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1b4cd9a61b2093102ecc653b234bcbf2"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Target Table</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:55</sys_created_on>
+        <sys_id>1f4c1da61b2093102ecc653b234bcb66</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:29:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1f4c1da61b2093102ecc653b234bcb66"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8)</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>subject</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Subject</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:55</sys_created_on>
+        <sys_id>274c1da61b2093102ecc653b234bcba3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:29:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=274c1da61b2093102ecc653b234bcba3"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>target_table_name</dependent>
+        <dependent_on_field>target_table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Target Record</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:56</sys_created_on>
+        <sys_id>634c1da61b2093102ecc653b234bcbe0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:29:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=634c1da61b2093102ecc653b234bcbe0"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8)</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>from_address</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>From address</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:56</sys_created_on>
+        <sys_id>af4c1da61b2093102ecc653b234bcbeb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:29:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=af4c1da61b2093102ecc653b234bcbeb"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8)</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>body_text</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Body Text</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:55</sys_created_on>
+        <sys_id>d34c1da61b2093102ecc653b234bcb8b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:29:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d34c1da61b2093102ecc653b234bcb8b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>User</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:55</sys_created_on>
+        <sys_id>e74c1da61b2093102ecc653b234bcbbb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:29:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e74c1da61b2093102ecc653b234bcbbb"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=cfdb55aa1bac53102ecc653b234bcbb8"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cfdb55aa1bac53102ecc653b234bcbb8"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=cfdb55aa1bac53102ecc653b234bcbb8^sys_idNOT IN0f4c51661b2093102ecc653b234bcb2d"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</flow>
+        <generation_source/>
+        <name>Inbound Email</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:54</sys_created_on>
+        <sys_id>0f4c51661b2093102ecc653b234bcb2d</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:32</sys_updated_on>
+        <trigger_definition display_value="Inbound Email">6f0180400b320300f4eb8bf637673ad4</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VWW0/bMBT+K1aeO5Q2hZa+ITY0XobUVuMBochxThpPrh1sp9Ah/vuOnYSkFxgVSNu0l6i2T8/luyS+eQwETUAEk+DLknJBmJIpt1xJE/QCLi1oScV8XQBGbJwtqUypVXodTDIqDPSCTKvlHJaFoBaeN5VOQQeTfhj2ghUVJczW5jLFZJhC0qVLC65wvJHcR+KRKZMfwOxsfjadz64v51/PLy/IFO5KMJacGQMWg1nORapBBpOb215QUI1prSv6uHXEXd3+OOyH0XDERlF/EIVhNoSE9oeDY3o6OomyESZ8BZGXW7Z7MOoODw8WZArpMzK7AGqg6ZUU7UaOBGDO8+ecxCpyV1LBszW5zznLie/EEGOptmStSk0yoe6PPEEPhv/Enoahq68hA0SCeVjXJvZ/DDr7ccoNcrduBvfIKs7gqnC1K8osTQRUP5kS5VJ+qwDBdQoZLYX9XlOHO6XBpFC4sd0cjUxmubqfNlUvuPQY1YdCMSqeV9RazZPSgvFkNjDESYm0un8Fq0Hw5GeIHSxNI3XJuOoaA+rRLjiIWnuGaV7YM2b5qhHrU681w5VnbscBbrnwB4fJf/CK/FVdatUCV7fbgfIwjZ+ESRSiwvdrfAQdjTeDbjVjt+ftDvIOKc9zIIXmSnO7JgvEXjpJW9xFphdYiqiVe+COJlwmqpRppfEmwGxpe1PZLwj6r9PyihuO1eNCqwK0dT0uBE/hKC+TI+/gevjKp3E9/JHBejFNVxTLpVVqJ50qGyapdt5iid8YYGZVgUwpBsZwudi1QqKUACoPtkL0ihUMFm3fqjG4MOoJa+3R/wB/oCuG4xf9kXX9sYvDG3q12xB1Z3+He65z5xddQq9pCQxRGOgd5GRD7rnN/QoX+JH85GEjvv4fMI7rtd39vElbffi/OWsKBRI2BYakEG+mHW95gGMvtEPtNXzFXnhHWICNK/paRz3E6IFRNB7H3MbUmDh0TwzU1UVr13D+5tXcww52X3LaR/cNx8dRP3Lug2TEQor3spOURcPkuOO+fVjtH8buQa4LyTu/WT4vUZm3lq76QZAU48hB2rqOS6aW+J7AGNe5l9iG78b/6Aer1vYH3bRufwHa1laEeAwAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>email</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=cfdb55aa1bac53102ecc653b234bcbb8^sys_idNOT IN1162766e1ba893102ecc653b234bcb9b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Submit Catalog Item Request">c7a04c607312001098e194596bf6a72a</action_type>
+        <action_type_parent display_value="Submit Catalog Item Request">bfb5ea807312001098e194596bf6a707</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 13:19:03</sys_created_on>
+        <sys_id>1162766e1ba893102ecc653b234bcb9b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:30:59</sys_updated_on>
+        <ui_id>60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1162766e1ba893102ecc653b234bcb9b"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=cfdb55aa1bac53102ecc653b234bcbb8"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=cfdb55aa1bac53102ecc653b234bcbb8^sys_idNOT INdf11da2e1ba493102ecc653b234bcbf2"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">5b11da2e1ba493102ecc653b234bcbf2</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</flow>
+        <flow_variables_assigned>asset_type,priority,company,short_description,description,consumable</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:53:39</sys_created_on>
+        <sys_id>df11da2e1ba493102ecc653b234bcbf2</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 14:02:10</sys_updated_on>
+        <ui_id>dbdcce06-1630-405d-9699-2168a9b59a01</ui_id>
+        <updation_source/>
+        <values>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</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=cfdb55aa1bac53102ecc653b234bcbb8"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=cfdb55aa1bac53102ecc653b234bcbb8^sys_idNOT IN1121f6aa1ba893102ecc653b234bcbdf,1f79922e1be493102ecc653b234bcb78,6f79922e1be493102ecc653b234bcb89,a379922e1be493102ecc653b234bcb84,df791a6e1ba493102ecc653b234bcb0b,e779922e1be493102ecc653b234bcb7e"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=217342a4-44b9-4cde-8a8d-b8d5a2979fb1</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>consumable</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>consumable</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 13:13:36</sys_created_on>
+        <sys_id>1121f6aa1ba893102ecc653b234bcbdf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=e765044e-aa88-4aa7-8247-0e2af00c2ca6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>asset_type</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Asset Type</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 11:30:15</sys_created_on>
+        <sys_id>1f79922e1be493102ecc653b234bcb78</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=44b14904-562e-419f-841c-f855b946db53</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>priority</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Priority</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 11:30:15</sys_created_on>
+        <sys_id>6f79922e1be493102ecc653b234bcb89</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 11:34:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=098b5865-b64d-49eb-9083-e0f646b0e272</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>company</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Company</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 11:30:15</sys_created_on>
+        <sys_id>a379922e1be493102ecc653b234bcb84</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 11:34:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=32a2e4a5-baf5-4798-bc0c-5d1a20b05a61</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>short_description</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Short Description</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 11:30:15</sys_created_on>
+        <sys_id>df791a6e1ba493102ecc653b234bcb0b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 11:34:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=55022306-edcc-465f-88dd-2e9721d2fa78</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>description</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Description</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</model>
+        <model_id>cfdb55aa1bac53102ecc653b234bcbb8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 11:30:15</sys_created_on>
+        <sys_id>e779922e1be493102ecc653b234bcb7e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 11:34:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>short_description</element>
+        <help/>
+        <hint/>
+        <label>Short Description</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 11:30:15</sys_created_on>
+        <sys_id>1f791a6e1ba493102ecc653b234bcb11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 11:30:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>company</element>
+        <help/>
+        <hint/>
+        <label>Company</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 11:30:15</sys_created_on>
+        <sys_id>6f79922e1be493102ecc653b234bcb87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 11:30:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>consumable</element>
+        <help/>
+        <hint/>
+        <label>consumable</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 13:13:36</sys_created_on>
+        <sys_id>91217aaa1ba893102ecc653b234bcbd4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:13:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>description</element>
+        <help/>
+        <hint/>
+        <label>Description</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 11:30:15</sys_created_on>
+        <sys_id>a379922e1be493102ecc653b234bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 11:30:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>priority</element>
+        <help/>
+        <hint/>
+        <label>Priority</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 11:30:15</sys_created_on>
+        <sys_id>a779922e1be493102ecc653b234bcba6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 11:30:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>asset_type</element>
+        <help/>
+        <hint/>
+        <label>Asset Type</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 11:30:15</sys_created_on>
+        <sys_id>e779922e1be493102ecc653b234bcb7c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 11:30:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_cfdb55aa1bac53102ecc653b234bcbb8"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>from_address</element>
+        <help/>
+        <hint/>
+        <label>From address</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:56</sys_created_on>
+        <sys_id>274c1da61b2093102ecc653b234bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:02:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>subject</element>
+        <help/>
+        <hint/>
+        <label>Subject</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:55</sys_created_on>
+        <sys_id>2b4c1da61b2093102ecc653b234bcbaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:02:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>body_text</element>
+        <help/>
+        <hint/>
+        <label>Body Text</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:55</sys_created_on>
+        <sys_id>574c1da61b2093102ecc653b234bcb92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:02:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_record</element>
+        <help/>
+        <hint/>
+        <label>Target Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:56</sys_created_on>
+        <sys_id>a74c1da61b2093102ecc653b234bcbe7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:02:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inbound_email</element>
+        <help/>
+        <hint>The record representing the inbound email.</hint>
+        <label>Inbound Email</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:55</sys_created_on>
+        <sys_id>d74c1da61b2093102ecc653b234bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:02:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_table_name</element>
+        <help/>
+        <hint/>
+        <label>Target Table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:55</sys_created_on>
+        <sys_id>db4c1da61b2093102ecc653b234bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:02:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user</element>
+        <help/>
+        <hint/>
+        <label>User</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 07:02:56</sys_created_on>
+        <sys_id>eb4c1da61b2093102ecc653b234bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 07:02:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_cfdb55aa1bac53102ecc653b234bcbb8"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_cfdb55aa1bac53102ecc653b234bcbb8"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>30000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>catalog_inbound_flow_asset_request</internal_name>
+        <label_cache>[{"name":"flow_variable.short_description","label":"Flow Variables➛Short Description","type":"string","base_type":"string","usedInstances":{"73b7256c-e53a-4661-917e-1bfd2d00edec":["short_description"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"32a2e4a5-baf5-4798-bc0c-5d1a20b05a61"}},{"name":"flow_variable.description","label":"Flow Variables➛Description","type":"string","base_type":"string","usedInstances":{"73b7256c-e53a-4661-917e-1bfd2d00edec":["description"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"55022306-edcc-465f-88dd-2e9721d2fa78"}},{"name":"trigger.inbound_email.subject","label":"Trigger - Inbound Email➛Email Record➛Subject","reference":"","reference_display":"Subject","type":"string_full_utf8","base_type":"string_full_utf8","parent_table_name":"sys_email","column_name":"subject","usedInstances":{"dbdcce06-1630-405d-9699-2168a9b59a01":["short_description-4"]}},{"name":"trigger.body_text","label":"Trigger - Inbound Email➛Body Text","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"dbdcce06-1630-405d-9699-2168a9b59a01":["description-5"],"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["description"]},"attributes":{"test_input_hidden":"true"}},{"name":"flow_variable.consumable","label":"Flow Variables➛consumable","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"15f87092-f0b7-4980-b4df-b5a35a3b5197":[null],"df2b0a7a-fa44-46fa-855a-463f9e61804d":[null],"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["consumables"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"217342a4-44b9-4cde-8a8d-b8d5a2979fb1","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"trigger.inbound_email","label":"Trigger - Inbound Email➛Email Record","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","choices":[{"order":0.0}],"usedInstances":{"aba6bd08-1a45-4ce3-a7f9-48b794f617d2":["sysparm_requested_for"]},"attributes":{"":""}},{"name":"flow_variable.priority","label":"Flow Variables➛Priority","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"73b7256c-e53a-4661-917e-1bfd2d00edec":["priority"],"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["priority"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"44b14904-562e-419f-841c-f855b946db53","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"trigger.inbound_email.sys_id","label":"Trigger - Inbound Email➛Email Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_email","column_name":"sys_id","usedInstances":{"aba6bd08-1a45-4ce3-a7f9-48b794f617d2":["sysparm_requested_for"],"73b7256c-e53a-4661-917e-1bfd2d00edec":["requestor"],"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["requestor"]}},{"name":"flow_variable.company","label":"Flow Variables➛Company","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"73b7256c-e53a-4661-917e-1bfd2d00edec":["company"],"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["company"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"098b5865-b64d-49eb-9083-e0f646b0e272","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"trigger.inbound_email.user_id","label":"Trigger - Inbound Email➛Email Record➛User ID","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_email","column_name":"user_id","choices":[{"order":0.0}],"usedInstances":{"aba6bd08-1a45-4ce3-a7f9-48b794f617d2":["sysparm_requested_for"]}},{"name":"flow_variable.asset_type","label":"Flow Variables➛Asset Type","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"73b7256c-e53a-4661-917e-1bfd2d00edec":["type_of_asset"],"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["type_of_asset"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"e765044e-aa88-4aa7-8247-0e2af00c2ca6","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"trigger.subject","label":"Trigger - Inbound Email➛Subject","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd":["short_description"]},"attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master>true</master>
+        <name>Catalog Inbound Flow Asset Request</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Catalog Inbound Flow Asset Request">cfdb55aa1bac53102ecc653b234bcbb8</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5add4aa61ba493102ecc653b234bcb53</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:36</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=5add4aa61ba493102ecc653b234bcb53"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5add4aa61ba493102ecc653b234bcb53"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=5add4aa61ba493102ecc653b234bcb53"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=5add4aa61ba493102ecc653b234bcb53^sys_idNOT IN12dd4aa61ba493102ecc653b234bcb55"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>5add4aa61ba493102ecc653b234bcb53</id>
+        <name>Catalog Inbound Flow Asset Request</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:24</sys_created_on>
+        <sys_id>12dd4aa61ba493102ecc653b234bcb55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 10:39:24</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=12dd4aa61ba493102ecc653b234bcb55"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=5add4aa61ba493102ecc653b234bcb53^sys_idNOT IN12dd4aa61ba493102ecc653b234bcb57,2edd4aa61ba493102ecc653b234bcb97,66dd4aa61ba493102ecc653b234bcb8c,6edd4aa61ba493102ecc653b234bcb80,a6dd4aa61ba493102ecc653b234bcb75,a6dd4aa61ba493102ecc653b234bcba3,a6dd4aa61ba493102ecc653b234bcbd4"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Target Table</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:24</sys_created_on>
+        <sys_id>12dd4aa61ba493102ecc653b234bcb57</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=12dd4aa61ba493102ecc653b234bcb57"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>from_address</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>From address</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:24</sys_created_on>
+        <sys_id>2edd4aa61ba493102ecc653b234bcb97</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2edd4aa61ba493102ecc653b234bcb97"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inbound_email</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Inbound Email</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_email">sys_email</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ</reference_qual>
+        <reference_qual_condition table="sys_email">type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ<item display_value="received" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="received"/>
+            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:24</sys_created_on>
+        <sys_id>66dd4aa61ba493102ecc653b234bcb8c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=66dd4aa61ba493102ecc653b234bcb8c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>subject</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Subject</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:24</sys_created_on>
+        <sys_id>6edd4aa61ba493102ecc653b234bcb80</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6edd4aa61ba493102ecc653b234bcb80"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>body_text</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Body Text</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:24</sys_created_on>
+        <sys_id>a6dd4aa61ba493102ecc653b234bcb75</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a6dd4aa61ba493102ecc653b234bcb75"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>User</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:25</sys_created_on>
+        <sys_id>a6dd4aa61ba493102ecc653b234bcba3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a6dd4aa61ba493102ecc653b234bcba3"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>target_table_name</dependent>
+        <dependent_on_field>target_table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Target Record</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:25</sys_created_on>
+        <sys_id>a6dd4aa61ba493102ecc653b234bcbd4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a6dd4aa61ba493102ecc653b234bcbd4"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=5add4aa61ba493102ecc653b234bcb53"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5add4aa61ba493102ecc653b234bcb53"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=5add4aa61ba493102ecc653b234bcb53^sys_idNOT INb6dd4aa61ba493102ecc653b234bcbf8"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</flow>
+        <generation_source/>
+        <name>Inbound Email</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:25</sys_created_on>
+        <sys_id>b6dd4aa61ba493102ecc653b234bcbf8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:35</sys_updated_on>
+        <trigger_definition display_value="Inbound Email">6f0180400b320300f4eb8bf637673ad4</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VWW0/bMBT+K1aeO5Q2hZa+ITY0XobUVuMBochxThpPrh1sp9Ah/vuOnYSkFxgVSNu0l6i2T8/luyS+eQwETUAEk+DLknJBmJIpt1xJE/QCLi1oScV8XQBGbJwtqUypVXodTDIqDPSCTKvlHJaFoBaeN5VOQQeTfhj2ghUVJczW5jLFZJhC0qVLC65wvJHcR+KRKZMfwOxsfjadz64v51/PLy/IFO5KMJacGQMWg1nORapBBpOb215QUI1prSv6uHXEXd3+OOyH0XDERlF/EIVhNoSE9oeDY3o6OomyESZ8BZGXW7Z7MOoODw8WZArpMzK7AGqg6ZUU7UaOBGDO8+ecxCpyV1LBszW5zznLie/EEGOptmStSk0yoe6PPEEPhv/Enoahq68hA0SCeVjXJvZ/DDr7ccoNcrduBvfIKs7gqnC1K8osTQRUP5kS5VJ+qwDBdQoZLYX9XlOHO6XBpFC4sd0cjUxmubqfNlUvuPQY1YdCMSqeV9RazZPSgvFkNjDESYm0un8Fq0Hw5GeIHSxNI3XJuOoaA+rRLjiIWnuGaV7YM2b5qhHrU681w5VnbscBbrnwB4fJf/CK/FVdatUCV7fbgfIwjZ+ESRSiwvdrfAQdjTeDbjVjt+ftDvIOKc9zIIXmSnO7JgvEXjpJW9xFphdYiqiVe+COJlwmqpRppfEmwGxpe1PZLwj6r9PyihuO1eNCqwK0dT0uBE/hKC+TI+/gevjKp3E9/JHBejFNVxTLpVVqJ50qGyapdt5iid8YYGZVgUwpBsZwudi1QqKUACoPtkL0ihUMFm3fqjG4MOoJa+3R/wB/oCuG4xf9kXX9sYvDG3q12xB1Z3+He65z5xddQq9pCQxRGOgd5GRD7rnN/QoX+JH85GEjvv4fMI7rtd39vElbffi/OWsKBRI2BYakEG+mHW95gGMvtEPtNXzFXnhHWICNK/paRz3E6IFRNB7H3MbUmDh0TwzU1UVr13D+5tXcww52X3LaR/cNx8dRP3Lug2TEQor3spOURcPkuOO+fVjtH8buQa4LyTu/WT4vUZm3lq76QZAU48hB2rqOS6aW+J7AGNe5l9iG78b/6Aer1vYH3bRufwHa1laEeAwAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>email</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=5add4aa61ba493102ecc653b234bcb53^sys_idNOT IN2763baee1ba893102ecc653b234bcb92"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Submit Catalog Item Request">c7a04c607312001098e194596bf6a72a</action_type>
+        <action_type_parent display_value="Submit Catalog Item Request">bfb5ea807312001098e194596bf6a707</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c7a04c607312001098e194596bf6a72a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 13:23:35</sys_created_on>
+        <sys_id>2763baee1ba893102ecc653b234bcb92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:35</sys_updated_on>
+        <ui_id>60a4bdd4-0fec-4ac6-bca5-b6d80d295cfd</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2763baee1ba893102ecc653b234bcb92"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=5add4aa61ba493102ecc653b234bcb53"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=5add4aa61ba493102ecc653b234bcb53^sys_idNOT IN00396eaa1b6893102ecc653b234bcbfd"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">5b11da2e1ba493102ecc653b234bcbf2</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</flow>
+        <flow_variables_assigned>asset_type,priority,company,short_description,description,consumable</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:50</sys_created_on>
+        <sys_id>00396eaa1b6893102ecc653b234bcbfd</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:36</sys_updated_on>
+        <ui_id>dbdcce06-1630-405d-9699-2168a9b59a01</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1c61PbOBD/V3T+BDR2bMd2HPhww9DrY4ZebwrXL4TLyLKc6OpXLRnI0fzvt/IrgVBKbpJjyogP2F5L+9Lu/thkh1stK0VeCn6eHXPOpql2eHHZ01gqaXB/q7FQO9SsaDga2Ta1AuqMBpZpU0I8dxDYAycgwdDXelqKEworMedUTMQ8p0C7wnEpiXAbMp7HeP55SSEzFocFbSTmuAAGghba4e29V0/VIMYBjWHpsVQBndcqPKRWdTnUuChYOm2eT5vNZy0xK0KpjN3T6I2gaUhBiwjHnPa0BKchFlkx7ygFxeHHNF4SZiwVtZkzGuf1XYJvOPsHJPumaco9EQUbSeOO7nHSuKomR6+xwKBUSURZdJ7LGKG89k5II1zG4mSVVi/4mAuWpfUWgYO43Z3FZZL+XvtF6xisnEzJQQmaS6OlFY1J0dksu/7UavmGpZV/mpdxRnDcPWEBXgxKIfW51Up2fs/hNWXN5TSmCUicJDjPgTLJi+yKVVJA6cSYxvBgRHF2DdrJWDUwkRYacBjYeAP01xX5My6YNPcDsIHNUtyfKfta0vcykOjQc03HoTrGvq87GA9133aGukltHJkmsQn2tEVP43N+EkPYLB0FJzT5Wkoza7c1DprUPpZbSMFycQxKXcEWODPa0qQbVkIQnh5bq/UPxunBwTGBA+VIGtY/rixF0lJUcnAOEjOKonBSUbLgb0qEgc4qBigpuUAFhYBJEUZVEhpIcvwoYxqlZRLAhXGURZFMlWCOXlmIpei3osgK9A7CO5Yizmjt30qZK8xi6VWUVWHFUROmqMxBsbwAVeWesWaMNYQjyORWPbmd3uAkj+khaFMgPssKAWdF0Lg0zUHYLjQgEKZTWhikLCDIhFEtlIdd2QVSjySvxrKOiyT2x6nkXODrd+cfTr/HN8jC+URAPh+hej2JKU7PgdDuaBgYBQXbCN3rV3Ry8Vd1pZev6mt/2qt22MPxOK1v9iXPmmuCBZm1HDsRRkXe61dxcDEe88nlgYyGQ7g92DNe7fdZw4NFaG/Jw/bq3zVbI6bpVDTcKbL20e04RfAjBVesZWq1wqstF9al9ECyt2+I7DS7psUJ5nRv/6jeKKXd39hsry1LqbjOii9oSnHR2NoKlT/NcXRrl8saAYv60gZkKwrewpt2tzbWjrTFYtFrEMd7tN77o2VpzwuWFUzMt4s3T5Df4s0fSwXWVdoEazyFNS8LaxwnsJyR6eiuZ1PdsUaR7jsW0SPfdYOR44WBO9gJ1nQBqJBmB0izOdaM034fydjLUbVH4ClHYDxqcEb6OEHXDAp7Sq/BJZQ/H0C1wbMlYGqceA+KJMNl+R/cqf148GjtdZaFFlI1x+mWS/8TxLel/6STv6bQJoV/oAr/yyr85sgPXN9z9cBzQt0Z0UAfmf5Ap2bkOV4AvcbQ3knhb+NP1f0d1H2o4ZaBjkNIU/TtW/U3KxKZ1OwKeFX+qvmgqMgSRArMZ1JjKJvynQQD6ZOEVYZshiKtwOfsXJrg2mLD0nCU4f+dlqXpIerfcAC2gU6z7AvEROXThoEMLfkofRdAcyOPZQpxxwRHkGMTFt6V+fZTKw7gFr2VOf+JEqjGe7VL4JZOGt6tk5bdUs3BAAHNcln867veqkn7D/VJy811vahKosRDMO58BuFRr+N1OFW6/9L1UY80TCE0LBb2ALXwA6hlBkuMWov5Ffi8vW0jj6VBVqbhhCaQlgYvqwKwWKzj61O2bAbATzClBeAzaQt6fceWR8zcBJQdBcovC5QHNrapgwGUceTqznDk6wExie6GFrbNwHSxZ20FlCtfdIlJh49+cr3yIfWPUrIDg8fT8O6yzVLvCcq2qfdg0v33dHNVur2sdHNd07YHpqfTkBDd8dxI9/0w1G06GtpWaEd46O8g3SzLtiIPYwAPfz2Cw2i1V0t5mVTntd2vqn6sQZtDd1R4SK1NMsjaQQZ5rkqh50sh2xoOHBs7uuMEI90hIdV97Id64IcutkfDURRsB7HW28guBlUn+dzfVe2q4YOGQ7ZSHEXgSMrgkApwyUl39OCb7C6FQ9fxpD6x2/DrTj9EXPs+64H+6FLW9jrJ1ECDGmh4eSChBhoUSKiBBjXQoAYaFNaogQaFNGqgQQ00qIEGVfi3WvjVQMNLrPtqoEENNKiBBjXQoED5pwRlNdCgBhpUuqmBBjXQoAYafo4UUgMNL7STVAMN/+dAQ0gJ43Ai51Kl9+3/apAv5lBzGVklyW+6ZNouaYt/AXaUN8b1QQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=5add4aa61ba493102ecc653b234bcb53"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=5add4aa61ba493102ecc653b234bcb53^sys_idNOT IN33296eaa1b6893102ecc653b234bcbe0,3f296eaa1b6893102ecc653b234bcbcd,7f296eaa1b6893102ecc653b234bcbe5,b7296eaa1b6893102ecc653b234bcbd4,bb296eaa1b6893102ecc653b234bcbeb,f3296eaa1b6893102ecc653b234bcbda"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=32a2e4a5-baf5-4798-bc0c-5d1a20b05a61</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>short_description</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Short Description</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:49</sys_created_on>
+        <sys_id>33296eaa1b6893102ecc653b234bcbe0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 12:38:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=e765044e-aa88-4aa7-8247-0e2af00c2ca6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>asset_type</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Asset Type</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:49</sys_created_on>
+        <sys_id>3f296eaa1b6893102ecc653b234bcbcd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=55022306-edcc-465f-88dd-2e9721d2fa78</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>description</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Description</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:49</sys_created_on>
+        <sys_id>7f296eaa1b6893102ecc653b234bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 12:38:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=217342a4-44b9-4cde-8a8d-b8d5a2979fb1</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>consumable</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>consumable</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:49</sys_created_on>
+        <sys_id>b7296eaa1b6893102ecc653b234bcbd4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=44b14904-562e-419f-841c-f855b946db53</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>priority</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Priority</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:49</sys_created_on>
+        <sys_id>bb296eaa1b6893102ecc653b234bcbeb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 12:38:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=098b5865-b64d-49eb-9083-e0f646b0e272</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>company</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Company</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Catalog Inbound Flow Asset Request">5add4aa61ba493102ecc653b234bcb53</model>
+        <model_id>5add4aa61ba493102ecc653b234bcb53</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:49</sys_created_on>
+        <sys_id>f3296eaa1b6893102ecc653b234bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 12:38:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>company</element>
+        <help/>
+        <hint/>
+        <label>Company</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:49</sys_created_on>
+        <sys_id>33296eaa1b6893102ecc653b234bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 12:38:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>short_description</element>
+        <help/>
+        <hint/>
+        <label>Short Description</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:49</sys_created_on>
+        <sys_id>7f296eaa1b6893102ecc653b234bcbe3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 12:38:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>asset_type</element>
+        <help/>
+        <hint/>
+        <label>Asset Type</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:49</sys_created_on>
+        <sys_id>b7296eaa1b6893102ecc653b234bcbd2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 12:38:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>description</element>
+        <help/>
+        <hint/>
+        <label>Description</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:49</sys_created_on>
+        <sys_id>bb296eaa1b6893102ecc653b234bcbe9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 12:38:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>consumable</element>
+        <help/>
+        <hint/>
+        <label>consumable</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:49</sys_created_on>
+        <sys_id>f3296eaa1b6893102ecc653b234bcbd8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:35</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>priority</element>
+        <help/>
+        <hint/>
+        <label>Priority</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 12:38:50</sys_created_on>
+        <sys_id>f7296eaa1b6893102ecc653b234bcbef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 12:38:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_5add4aa61ba493102ecc653b234bcb53"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>from_address</element>
+        <help/>
+        <hint/>
+        <label>From address</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:25</sys_created_on>
+        <sys_id>22dd4aa61ba493102ecc653b234bcb9f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 10:39:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user</element>
+        <help/>
+        <hint/>
+        <label>User</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:25</sys_created_on>
+        <sys_id>22dd4aa61ba493102ecc653b234bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 10:39:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_table_name</element>
+        <help/>
+        <hint/>
+        <label>Target Table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:24</sys_created_on>
+        <sys_id>6add4aa61ba493102ecc653b234bcb64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 10:39:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inbound_email</element>
+        <help/>
+        <hint>The record representing the inbound email.</hint>
+        <label>Inbound Email</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:24</sys_created_on>
+        <sys_id>a6dd4aa61ba493102ecc653b234bcb93</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 10:39:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>body_text</element>
+        <help/>
+        <hint/>
+        <label>Body Text</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:24</sys_created_on>
+        <sys_id>e6dd4aa61ba493102ecc653b234bcb7c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 10:39:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>subject</element>
+        <help/>
+        <hint/>
+        <label>Subject</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:24</sys_created_on>
+        <sys_id>eedd4aa61ba493102ecc653b234bcb87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 10:39:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_record</element>
+        <help/>
+        <hint/>
+        <label>Target Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:25</sys_created_on>
+        <sys_id>f2dd4aa61ba493102ecc653b234bcbe8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 10:39:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_5add4aa61ba493102ecc653b234bcb53"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_5add4aa61ba493102ecc653b234bcb53"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>cfdb55aa1bac53102ecc653b234bcbb8</sys_id>
+        <latest_snapshot>5add4aa61ba493102ecc653b234bcb53</latest_snapshot>
+        <compiler_build>glide-brazil-08-25-2026__patch2-10-22-2026_11-03-2026_2245.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=cfdb55aa1bac53102ecc653b234bcbb8^sys_idNOT IN3add8aa61ba493102ecc653b234bcb19"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"3add8aa61ba493102ecc653b234bcb19","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>cfdb55aa1bac53102ecc653b234bcbb8</plan_id>
+        <snapshot>5add4aa61ba493102ecc653b234bcb53</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 10:39:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3add8aa61ba493102ecc653b234bcb19</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 13:23:36</sys_updated_on>
+        <trigger display_value="">3add8aa61ba493102ecc653b234bcb18</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=cfdb55aa1bac53102ecc653b234bcbb8"/>
+</record_update>
