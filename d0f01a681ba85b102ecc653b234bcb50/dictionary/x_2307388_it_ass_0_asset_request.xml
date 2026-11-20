@@ -16,6 +16,7 @@
         <element label="Opened By" max_length="32" name="opened_by" reference="sys_user" type="reference"/>
         <element label="Company" max_length="32" name="company" reference="core_company" type="reference"/>
         <element label="Description" max_length="400" name="description" type="string"/>
+        <element label="Correlation ID" max_length="40" name="correlation_id" type="string"/>
         <element choice="1" default="submitted" label="Status" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Delivered" sequence="3" value="delivered"/>

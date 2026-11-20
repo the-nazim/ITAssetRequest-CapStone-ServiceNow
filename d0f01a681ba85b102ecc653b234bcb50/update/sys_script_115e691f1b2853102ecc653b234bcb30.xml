@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2307388_it_ass_0_asset_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_2307388_it_ass_0_asset_request">sys_created_by!=api_user^EQ<item endquery="false" field="sys_created_by" goto="false" newquery="false" operator="!=" or="false" value="api_user"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Scripted API Record Creation Ins. B</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+
+	try {
+        // Updated method name to match your POST Create HTTP Method
+        var request = new sn_ws.RESTMessageV2('Scripted API Instance A to B', 'Post Method');
+
+        var payLoad = {
+            "opened_by": current.opened_by.toString(),
+            "requestor": current.requestor.toString(),
+            "type_of_asset": current.type_of_asset.toString(),
+            "consumables": current.consumables.toString(),
+            "company": current.company.toString(),
+            "priority": current.priority.toString(),
+            "short_description": current.short_description.toString(),
+            "description": current.description.toString(),
+            "correlation_id": current.getUniqueValue()
+        };
+
+        request.setRequestBody(JSON.stringify(payLoad));
+
+        var response = request.execute();
+        var httpStatus = response.getStatusCode();
+        var responseBody = response.getBody();
+
+        // /create strictly returns 201 on insert
+        if (httpStatus == 201) {
+            var parsedJson = JSON.parse(responseBody);
+            var res = parsedJson.result;
+
+            gs.info("[Scripted API POST] Success (" + res.status + "). Target SysID: " + res.sys_id);
+
+            if (res && res.sys_id) {
+                var gr = new GlideRecord(current.getTableName());
+                if (gr.get(current.getUniqueValue())) {
+                    gr.setValue('correlation_id', res.sys_id);
+                    gr.setWorkflow(false);
+                    gr.update();
+                }
+            }
+        }
+		else {
+            gs.error("[Scripted API POST] Failed. Status: " + httpStatus + " Response: " + responseBody);
+        }
+    } 
+	catch(ex) {
+        gs.error("[Scripted API POST] Error: " + ex.getMessage());
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-19 16:20:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>115e691f1b2853102ecc653b234bcb30</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Scripted API Record Creation Ins. B</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name>sys_script_115e691f1b2853102ecc653b234bcb30</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-19 18:18:09</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=115e691f1b2853102ecc653b234bcb30"/>
+</record_update>

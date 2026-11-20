@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2307388_it_ass_0_asset_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_2307388_it_ass_0_asset_request">sys_created_by!=api_user^EQ<item endquery="false" field="sys_created_by" goto="false" newquery="false" operator="!=" or="false" value="api_user"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>ImportSet API Record Creation Ins. B </name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	try {
+        var request = new sn_ws.RESTMessageV2('Import Set API Instance A to B', 'Post Method');
+
+        // Match these keys to the exact Source field names in Instance B's Transform Map
+        var payLoad = {
+            "u_opened_by": current.opened_by.toString(),
+            "u_requestor": current.requestor.toString(),
+            "u_type_of_asset": current.type_of_asset.toString(),
+            "u_consumables": current.consumables.toString(),
+            "u_company": current.company.toString(),
+            "u_priority": current.priority.toString(),
+            "u_short_description": current.short_description.toString(),
+            "u_description": current.description.toString(),
+            "u_correlation_id": current.getUniqueValue()
+        };
+
+        request.setRequestBody(JSON.stringify(payLoad));
+
+        var response = request.execute();
+        var httpStatus = response.getStatusCode();
+        var responseBody = response.getBody();
+
+        if (httpStatus == 201) {
+            var parsedJson = JSON.parse(responseBody);
+            var targetResult = parsedJson.result && parsedJson.result[0];
+
+            if (targetResult && (targetResult.status == 'inserted' || targetResult.status == 'updated')) {
+                var targetSysId = targetResult.sys_id;
+                gs.info("[Import Set POST] Success (" + targetResult.status + "). Target SysID: " + targetSysId);
+
+                if (targetSysId){
+                    var gr = new GlideRecord(current.getTableName());
+                    if (gr.get(current.getUniqueValue())) {
+                        gr.setValue('correlation_id', targetSysId);
+                        gr.setWorkflow(false);
+                        gr.update();
+                    }
+                }
+            } 
+			else {
+                gs.error("[Import Set POST] Transform error on Instance B. Response: " + responseBody);
+            }
+        } 
+		else {
+            gs.error("[Import Set POST] HTTP failure. Status: " + httpStatus + " Response: " + responseBody);
+        }
+    } 
+	catch (ex) {
+        gs.error("[Import Set POST] Script error: " + ex.getMessage());
+    }
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-19 13:01:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9e2f78571be053102ecc653b234bcb77</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>ImportSet API Record Creation Ins. B </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IT Asset Management" source="x_2307388_it_ass_0">d0f01a681ba85b102ecc653b234bcb50</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">d0f01a681ba85b102ecc653b234bcb50</sys_scope>
+        <sys_update_name>sys_script_9e2f78571be053102ecc653b234bcb77</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-19 16:09:52</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=9e2f78571be053102ecc653b234bcb77"/>
+</record_update>
